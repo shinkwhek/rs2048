@@ -4,7 +4,7 @@ use clap::App;
 mod board;
 mod app;
 
-const VERSION_STR: &'static str = env!("CARGO_PKG_VERSION");
+const VERSION_STR: &str = env!("CARGO_PKG_VERSION");
 
 fn main() {
     let app = App::new("rs2048")
