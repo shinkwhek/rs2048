@@ -117,40 +117,40 @@ impl Board {
     }
 
     pub fn render(&self) {
-        println!("{0}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{3}",
-                 "\u{250c}","\u{2500}","\u{252c}","\u{2510}");
+        println!("{0}{1:->8}{2}{1:->8}{2}{1:->8}{2}{1:->8}{3}",
+                 "+","-","+","+");
 
         for i in 0..4 {
-            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}", "\u{2502}",
+            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}", "|",
                      Board::format_line(&self, 4*i, None),
                      Board::format_line(&self, 4*i+1, None),
                      Board::format_line(&self, 4*i+2, None),
                      Board::format_line(&self, 4*i+3, None),
                      );
-            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}", "\u{2502}",
+            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}", "|",
                      Board::format_line(&self, 4*i, None),
                      Board::format_line(&self, 4*i+1, None),
                      Board::format_line(&self, 4*i+2, None),
                      Board::format_line(&self, 4*i+3, None),
                      ); 
-            println!("{0}{1:^8}{0}{2:^8}{0}{3:^8}{0}{4:^8}{0}", "\u{2502}",
+            println!("{0}{1:^8}{0}{2:^8}{0}{3:^8}{0}{4:^8}{0}", "|",
                      Board::format_line(&self, 4*i, Some(4*i)),
                      Board::format_line(&self, 4*i+1, Some(1+(4*i))),
                      Board::format_line(&self, 4*i+2, Some(2+(4*i))),
                      Board::format_line(&self, 4*i+3, Some(3+(4*i))),
                      );
-            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}","\u{2502}",
+            println!("{0}{1}{0}{2}{0}{3}{0}{4}{0}","|",
                      Board::format_line(&self, 4*i, None),
                      Board::format_line(&self, 4*i+1, None),
                      Board::format_line(&self, 4*i+2, None),
                      Board::format_line(&self, 4*i+3, None),
                      );
             if i != 3 {
-                println!("{0}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{3}",
-                         "\u{251c}","\u{2500}","\u{253c}","\u{2524}");
+                println!("{0}{1:->8}{2}{1:->8}{2}{1:->8}{2}{1:->8}{3}",
+                         "+","-","+","+");
             } else {
-                println!("{0}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{2}{1:\u{2500}>8}{3}",
-                         "\u{2514}","\u{2500}","\u{2534}","\u{2518}");
+                println!("{0}{1:->8}{2}{1:->8}{2}{1:->8}{2}{1:->8}{3}",
+                         "+","-","+","+");
             }
 
         }
