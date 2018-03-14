@@ -7,7 +7,6 @@ mod app;
 const VERSION_STR: &'static str = env!("CARGO_PKG_VERSION");
 
 fn main() {
-
     let app = App::new("rs2048")
         .version(VERSION_STR)
         .author("shinkwhek")
