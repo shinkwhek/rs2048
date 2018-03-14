@@ -90,7 +90,7 @@ impl Update {
         let mut moved = false;
         for re in 0..4 {
             for v in 0..4 {
-                for i in vec![2, 1, 0] {
+                for &i in &[2, 1, 0] {
                     let t1 = board.tiles[4 * (i + 1) + v].is_exist();
                     let t2 = board.tiles[4 * i + v].is_exist();
 
@@ -152,7 +152,7 @@ impl Update {
         let mut moved = false;
         for re in 0..4 {
             for i in 0..4 {
-                for v in vec![2, 1, 0] {
+                for &v in &[2, 1, 0] {
                     let t1 = board.tiles[4 * i + v + 1].is_exist();
                     let t2 = board.tiles[4 * i + v].is_exist();
 
